@@ -7,14 +7,3 @@ services:
       - .:/src
     ports:
       - "8000:8000"
-
-    depends_on:
-      - db
-  db:
-    image: postgres
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    ports:
-      - 5432:5432
